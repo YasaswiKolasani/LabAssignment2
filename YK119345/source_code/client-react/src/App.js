@@ -30,7 +30,7 @@ function App() {
     <Navigationbar/>
     <BrowserRouter>
         <Routes>
-        <Route index element={<Profile />} />
+          <Route index element={<Profile />} />
           <Route path="/AddNumbers" element={<MyAdditionForm />} />
           
         </Routes>

@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import img1 from "./yasaswi-photo.jpg";
 import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import {  Routes, Route, Link} from 'react-router-dom';
+import MyAdditionForm from '../addNumbers/AddNumbers.jsx';
+
 const Profile =(props)=> {
     const [name, setName] = useState("Yasaswi Kolasani");
     const [description, setDesc] = useState("Pursuing Masters in computer science. Enrolled in the software engineering course.");
@@ -26,7 +30,15 @@ const Profile =(props)=> {
                         </div>
                     </div>
                 </div>
+                <Nav>
+              <Nav.Link as={Link} to="/addNumbers">
+                Add Numbers</Nav.Link>
+                </Nav>
+                <Routes>
+                    <Route path="/home" element={<MyAdditionForm />} />
+                    </Routes>
             </div>
+
         );
 }
 export default Profile;

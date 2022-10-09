@@ -16,7 +16,7 @@ function AddNumbers() {
             .then((result) => result.json())
             .then(result => {
                 debugger;
-                event.setRes(result.Addition)
+                setRes(result.Addition)
             });
     };
     
@@ -58,7 +58,7 @@ function AddNumbers() {
                     </form>
                 </div>
                 </div>
-
+              <div className='container'>
                 <div className="row">
                     <div className="col"><h4>Your Addition Result (from server) is: {result} </h4>
                     </div>
@@ -68,6 +68,7 @@ function AddNumbers() {
                         {/*Not the best way to do it, but works for small compute operations*/}
                         <h4>Your Addition Result (from ReactJS) is: {Number(firstNumber) + Number(secondNumber)} </h4>
                     </div>
+                </div>
                 </div>
             </div>
     );
