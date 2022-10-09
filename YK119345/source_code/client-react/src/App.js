@@ -1,9 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Navigationbar from './navbar/Navbar.js';
 import Profile from './components/profile/Profile.js';
+import MyAdditionForm from './components/addNumbers/AddNumbers.jsx';
 import axios from "axios";
+
 
 const options = {
   method: 'GET',
@@ -15,9 +18,9 @@ const options = {
   }
 };
 axios.request(options).then(function (response) {
-	console.log(response.data);
+  console.log(response.data);
 }).catch(function (error) {
-	console.error(error);
+  console.error(error);
 });
 function App() {
   
@@ -25,7 +28,13 @@ function App() {
     
     <>
     <Navigationbar/>
-    <Profile/>
+    <BrowserRouter>
+        <Routes>
+        <Route index element={<Profile />} />
+          <Route path="/AddNumbers" element={<MyAdditionForm />} />
+          
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
