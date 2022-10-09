@@ -2,4 +2,4 @@ AWS DNS Link to the application: http://ec2-3-209-222-182.compute-1.amazonaws.co
 OR
 Public IP Address Link: http://3.209.222.182:3000
 
-Github Repository Link: 
+Github Repository Link: https://github.com/YasaswiKolasani/LabAssignment2.git
